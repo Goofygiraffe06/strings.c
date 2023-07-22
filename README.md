@@ -5,7 +5,7 @@
 
 ## Introduction
 
-Welcome to `strings.c`! This project contains a self-implementation of the `strings.h` header file, which provides various string manipulation functions. As the famous quote goes, "You don't fully understand something until you build it," So I built it.
+Welcome to `strings.c`! This project contains a self-implementation of the `strings.h` header file, which provides various string manipulation functions. As the famous quote goes, "You don't fully understand something until you build it," So I tried building it.
 ## Motivation
 
 The motivation behind this project is to enhance our knowledge of C programming and improve our understanding of string handling. By building our own version of the `strings.h` library, we can explore the underlying concepts and algorithms used in these functions.
