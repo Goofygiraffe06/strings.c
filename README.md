@@ -14,19 +14,19 @@ The motivation behind this project is to enhance our knowledge of C programming 
 
 Below is a list of the functions we have implemented in `strings.c`:
 
-1.  `int str_len()`: Calculates the length of a given string.
-2.  `int str_lwr()`: Converts a string to lowercase.
-3.  `int str_upr()`: Converts a string to uppercase.
-4.  `int str_cmp()`: Compares two strings (ASCII Difference) and calculates the difference.
-5.  `int str_cat()`: Concatenates two strings.
+1.  `str_len()`: Calculates the length of a given string.
+2.  `str_lwr()`: Converts a string to lowercase.
+3.  `str_upr()`: Converts a string to uppercase.
+4.  `str_cmp()`: Compares two strings (ASCII Difference) and calculates the difference.
+5.  `str_cat()`: Concatenates two strings.
 
 ## Functions To Be Implemented (TO-DO)
 
 The following functions are yet to be implemented:
 
-1.  `char *str_cpy(char *dest, const char *src)`: Copies the contents of one string to another.
-2.  `char *str_chr(const char *str, int c)`: Locates the first occurrence of a character in a string.
-3.  `char *str_str(const char *haystack, const char *needle)`: Finds the first occurrence of a sub string in a string.
+1.  `str_cpy(char *dest, const char *src)`: Copies the contents of one string to another.
+2.  `str_chr(const char *str, int c)`: Locates the first occurrence of a character in a string.
+3.  `str_str(const char *haystack, const char *needle)`: Finds the first occurrence of a sub string in a string.
 
 ## How to Use
 
