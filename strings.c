@@ -1,14 +1,18 @@
 #include <stdio.h>
 
+// Function to find the lenght of the string
+
 void str_len() {
     char str[100];
 
     printf("Enter Your String: ");
     scanf("%99s", str);
     int i = 0;
-    for (; str[i] != 0; i++);
+    for (; str[i] != '\0'; i++); // Loop until the index reaches the null chareter making it the end of the string.
     printf("The Length Of String: %d\n", i);
 }
+
+// Function that converts upper case to lower case
 
 void str_lwr() {
     int i = 0;
@@ -17,8 +21,8 @@ void str_lwr() {
     printf("Enter Your String: ");
     scanf("%99s", str);
     for (i = 0; str[i] != '\0'; i++) {
-        if (str[i] >= 'A' && str[i] <= 'Z') {
-            str[i] += 32;
+        if (str[i] >= 'A' && str[i] <= 'Z') { // Check if the charecter is in uppercase else skip.
+            str[i] += 32; // The difference between an upper case and a lower case charecter in ascii table.
         }
     }
     printf("Lowercased String: %s\n", str);
@@ -31,8 +35,8 @@ void str_upr() {
     printf("Enter Your String: ");
     scanf("99%s", str);
     for (i = 0; str[i] != '\0'; i++) {
-        if (str[i] >= 'a' && str[i] <= 'z') {
-            str[i] -= 32;
+        if (str[i] >= 'a' && str[i] <= 'z') { // Check if the charecter is in lowercase else skip.
+            str[i] -= 32; // The difference between an lower case and an upper case charecter in ascii table.
         }
     }
     printf("Uppercased String: %s\n", str);
@@ -47,13 +51,13 @@ void str_cmp() {
     printf("Enter Second String: ");
     scanf("%99s", str2);
 
-    for (i = 0; str1[i] != '\0' && str2[i] != '\0'; i++) {
-        if (str1[i] == str2[i]) {
+    for (i = 0; str1[i] != '\0' && str2[i] != '\0'; i++) { // Loop until one of the strings charecter is a null charecter.
+        if (str1[i] == str2[i]) { // If both are same then skip.
             continue;
-        } else if (str1[i] > str2[i]) {
-            dev += str1[i] - str2[i];
-        } else if (str1[i] < str2[i]) {
-            dev -= str2[i] - str1[i];
+        } else if (str1[i] > str2[i]) { // If the ascii value of str1 of index i is greater than str2.
+            dev += str1[i] - str2[i]; // Then the difference between two charecters will be negative.
+        } else if (str1[i] < str2[i]) { // If the ascii value of str1 is less than str2 of index i.
+            dev -= str2[i] - str1[i]; 	// Then the difference will be positive
         }
     }
     printf("Difference: %d\n", dev);
@@ -69,14 +73,14 @@ void str_cat() {
     scanf("%99s", str2);
 
     for (i = 0; str1[i] != '\0'; i++) {
-        res[i] = str1[i];
+        res[i] = str1[i]; // Store str1 in res 
     }
 
-    for (j = 0; str2[j] != '\0'; j++, i++) {
+    for (j = 0; str2[j] != '\0'; j++, i++) { // i++ is used here to continue from where the str1 ended.
         res[i] = str2[j];
     }
 
-    res[i] = '\0';
+    res[i] = '\0'; // Adding a null charecter in the end.
 
     printf("The Concatenated String is: %s\n", res);
 }
