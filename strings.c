@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int str_len() {
+void str_len() {
     char str[100];
 
     printf("Enter Your String: ");
@@ -8,10 +8,9 @@ int str_len() {
     int i = 0;
     for (; str[i] != 0; i++);
     printf("The Length Of String: %d\n", i);
-    return 0;
 }
 
-int str_lwr() {
+void str_lwr() {
     int i = 0;
     char str[100];
 
@@ -23,10 +22,9 @@ int str_lwr() {
         }
     }
     printf("Lowercased String: %s\n", str);
-    return 0;
 }
 
-int str_upr() {
+void str_upr() {
     int i = 0;
     char str[100];
 
@@ -38,10 +36,9 @@ int str_upr() {
         }
     }
     printf("Uppercased String: %s\n", str);
-    return 0;
 }
 
-int str_cmp() {
+void str_cmp() {
     int i, dev = 0;
     char str1[100], str2[100];
 
@@ -60,10 +57,9 @@ int str_cmp() {
         }
     }
     printf("Difference: %d\n", dev);
-    return 0;
 }
 
-int str_cat() {
+void str_cat() {
     int i, j = 0;
     char str1[100], str2[100], res[200];
 
