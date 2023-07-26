@@ -4,14 +4,11 @@ int str_len() {
     char str[100];
 
     printf("Enter Your String: ");
-    scanf("%s", str);
-    int i = 0, len = 0;
-    while (str[i] != '\0') {
-        i++;
-        len++;
-    }
-    printf("The Length Of String: %d\n", len);
-    return len;
+    scanf("%99s", str);
+    int i = 0;
+    for (; str[i] != 0; i++);
+    printf("The Length Of String: %d\n", i);
+    return 0;
 }
 
 int str_lwr() {
@@ -19,7 +16,7 @@ int str_lwr() {
     char str[100];
 
     printf("Enter Your String: ");
-    scanf("%s", str);
+    scanf("%99s", str);
     for (i = 0; str[i] != '\0'; i++) {
         if (str[i] >= 'A' && str[i] <= 'Z') {
             str[i] += 32;
@@ -34,7 +31,7 @@ int str_upr() {
     char str[100];
 
     printf("Enter Your String: ");
-    scanf("%s", str);
+    scanf("99%s", str);
     for (i = 0; str[i] != '\0'; i++) {
         if (str[i] >= 'a' && str[i] <= 'z') {
             str[i] -= 32;
@@ -49,9 +46,9 @@ int str_cmp() {
     char str1[100], str2[100];
 
     printf("Enter First String: ");
-    scanf("%s", str1);
+    scanf("%99s", str1);
     printf("Enter Second String: ");
-    scanf("%s", str2);
+    scanf("%99s", str2);
 
     for (i = 0; str1[i] != '\0'; i++) {
         if (str1[i] == str2[i]) {
@@ -71,9 +68,9 @@ int str_cat() {
     char str1[100], str2[100], res[200];
 
     printf("Enter Your First String: ");
-    scanf("%s", str1);
+    scanf("%99s", str1);
     printf("Enter Your Second String: ");
-    scanf("%s", str2);
+    scanf("%99s", str2);
 
     for (i = 0; str1[i] != '\0'; i++) {
         res[i] = str1[i];
