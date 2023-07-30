@@ -24,7 +24,7 @@ Below is a list of the functions we have implemented in `strings.c`:
 
 The following functions are yet to be implemented:
 
-1.  `str_cpy(char *dest, const char *src)`: Copies the contents of one string to another.
+1.  ~~`str_cpy(char *dest, const char *src)`: Copies the contents of one string to another.~~
 2.  `str_chr(const char *str, int c)`: Locates the first occurrence of a character in a string.
 3.  `str_str(const char *haystack, const char *needle)`: Finds the first occurrence of a sub string in a string.
 
