@@ -85,6 +85,23 @@ void str_cat() {
     printf("The Concatenated String is: %s\n", res);
 }
 
+void str_cpy() {
+	char str1[100], str2[100];
+	int i = 0;
+
+	printf("Enter Your First String: ");
+	scanf("%99s", str1);
+	printf("Enter Your Second String: ");
+	scanf("%99s", str2);
+	printf("=> Before str_cpy()\n");
+	printf("First String: %s\nSecond String: %s\n", str1, str2);
+	for (; str1[i] != '\0'; i++) {
+		str2[i] = str1[i];
+	}
+	printf("=> After str_cpy()\n");
+	printf("First String: %s\nSecond String: %s\n", str1, str2);
+}
+
 int main(int argc, char const *argv[])
 {
 	int option;
@@ -104,24 +121,29 @@ int main(int argc, char const *argv[])
 	printf("You really thought it's a header file right?  @Goofygiraffe06  Custom implementation of strings.h library\n");\
 	printf("----------------------------------------------------------------------------------------------------------\n");
 
-	printf("Choose Your Option: \n");
-	printf("1. strlen()\n");
-	printf("2. strlwr()\n");
-	printf("3. strupr()\n");
-	printf("4. strcmp()\n");
-	printf("5. strcat()\n");
-	printf("99. Exit\n");
-	printf("=> ");
-	scanf("%d", &option);
+	do {
+    printf("\nChoose Your Option: \n");
+    printf("1. strlen()\n");
+    printf("2. strlwr()\n");
+    printf("3. strupr()\n");
+    printf("4. strcmp()\n");
+    printf("5. strcat()\n");
+    printf("6. strcpy()\n");
+    printf("99. Exit\n");
+    printf("=> ");
+    scanf("%d", &option);
 
-	switch(option) {
-		case 1: str_len(); break;
-		case 2: str_lwr(); break;
-		case 3: str_upr(); break;
-		case 4: str_cmp(); break;
-		case 5: str_cat(); break;
-		case 99: printf("Now Exiting! Byeeeee.\n"); break;
-		default: printf("Invalid Option Entered!"); break;
-	}
+    switch(option) 
+    {
+        case 1: str_len(); break;
+        case 2: str_lwr(); break;
+        case 3: str_upr(); break;
+        case 4: str_cmp(); break;
+        case 5: str_cat(); break;
+        case 6: str_cpy(); break;
+        case 99: printf("Now Exiting! Byeeeee.\n"); break;
+        default: printf("Invalid Option Entered!"); break;
+    }
+    } while (option != 99);
 	return 0;
 }
